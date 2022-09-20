@@ -1,5 +1,51 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let day = days[date.getDay()];
+  let month = months[date.getMonth()];
+  let currentDate = date.getDate();
+  if (currentDate < 10) {
+    currentDate = `0${currentDate}`;
+  }
+  let year = date.getFullYear();
+  return `${day}, ${currentDate} ${month} ${year}`;
+}
+function formatTime(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function showWeatherInformation(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -11,6 +57,12 @@ function showWeatherInformation(response) {
     response.data.wind.speed
   );
   document.querySelector("#pressure").innerHTML = response.data.main.pressure;
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
+  document.querySelector("#time").innerHTML = formatTime(
+    response.data.dt * 1000
+  );
 }
 
 let apiKey = "738993d32099f81cb584e637be73ea30";
