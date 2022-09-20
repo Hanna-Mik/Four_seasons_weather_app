@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Four Seasons Weather App</title>
   </head>
@@ -17,7 +18,7 @@
       <div class="weather-app">
         <h1>
           <ul>
-            <li>Kyiv</li>
+            <li id="city"></li>
             <li>Monday, 19 September 2022</li>
             <li>18:10</li>
           </ul>
@@ -31,17 +32,17 @@
                 id="icon"
               />
               <div>
-                <strong id="temperature">13</strong>
+                <strong id="temperature"></strong>
                 <span class="units">°C | °F</span>
               </div>
             </div>
           </div>
           <div class="col-6">
             <ul>
-              <li>cloudy</li>
-              <li>Humidity: 65 %</li>
-              <li>Wind: 5 km/h</li>
-              <li>Pressure: 996 mbar</li>
+              <li id="description"></li>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Wind: <span id="wind-speed"></span> km/h</li>
+              <li>Pressure: <span id="pressure"></span> mbar</li>
             </ul>
           </div>
         </div>

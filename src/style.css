@@ -14,6 +14,7 @@ h1 {
 }
 ul {
   list-style: none;
+  text-transform: capitalize;
 }
 header {
   padding: 0;
