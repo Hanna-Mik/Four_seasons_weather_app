@@ -40,7 +40,7 @@
         <h1>
           <ul>
             <li id="city"></li>
-            <li id="date">Monday, 19 September 2022</li>
+            <li id="date"></li>
             <li>last updated: <span id="time"></span></li>
           </ul>
         </h1>
@@ -50,7 +50,11 @@
               <img src="#" alt="cloudy" id="icon" />
               <div>
                 <strong id="temperature"></strong>
-                <span class="units">°C | °F</span>
+                <span class="units">
+                  <a href="#" id="celsius-link" class="active">°C </a>
+                  |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
               </div>
             </div>
           </div>

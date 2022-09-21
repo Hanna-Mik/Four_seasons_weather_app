@@ -45,3 +45,17 @@ footer {
   position: relative;
   top: -26px;
 }
+
+.weather-temperature .active {
+  color: white;
+  text-decoration: none;
+  cursor: default;
+}
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+}
