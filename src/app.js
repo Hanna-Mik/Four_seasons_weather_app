@@ -61,7 +61,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-  <div class="col-2">
+  <div class="col" id="day-weather">
     <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
           <img
           src="https://openweathermap.org/img/wn/${

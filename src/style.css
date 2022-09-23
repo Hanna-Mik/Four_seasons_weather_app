@@ -1,5 +1,5 @@
 body {
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   background: #3b577c;
@@ -64,7 +64,12 @@ footer {
   text-align: center;
   margin-top: 30px;
 }
+
 .weather-forecast-day,
 .weather-forecast-temperature-min {
   opacity: 0.7;
+}
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
