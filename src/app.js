@@ -132,32 +132,9 @@ function handleSubmit(event) {
   event.preventDefault();
   search(document.querySelector("#search-form-input").value);
 }
-function showFahrenheit(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let temperaureElement = document.querySelector("#temperature");
-  temperaureElement.innerHTML = Math.round(celsiusTemperature * 1.8 + 32);
-}
-
-function showCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperaureElement = document.querySelector("#temperature");
-  temperaureElement.innerHTML = Math.round(celsiusTemperature);
-}
 
 document
   .querySelector("#submit-button")
   .addEventListener("click", handleSubmit);
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsius);
 
 search("Kyiv");
