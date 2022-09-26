@@ -32,6 +32,23 @@ function formatDate(timestamp) {
   let year = date.getFullYear();
   return `${day}, ${currentDate} ${month} ${year}`;
 }
+function changeSeasons(month) {
+  let bodyBackground = document.querySelector("body");
+  let appBackground = document.querySelector(".weather-app");
+  if (month === 11 || month < 2) {
+    bodyBackground.classList.add("winter") &&
+      appBackground.classList.add("winter");
+  } else if (month > 1 && month < 5) {
+    bodyBackground.classList.add("spring") &&
+      appBackground.classList.add("spring");
+  } else if (month > 4 && month < 8) {
+    bodyBackground.classList.add("summer") &&
+      appBackground.classList.add("summer");
+  } else if (month > 7 && month < 11) {
+    bodyBackground.classList.add("autumn") &&
+      appBackground.classList.add("autumn");
+  }
+}
 function formatTime(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -164,5 +181,5 @@ document.querySelector("#winter").addEventListener("click", tryWinterImage);
 document.querySelector("#spring").addEventListener("click", trySpringImage);
 document.querySelector("#summer").addEventListener("click", trySummerImage);
 document.querySelector("#autumn").addEventListener("click", tryAutumnImage);
-
+changeSeasons(new Date().getMonth());
 search("Kyiv");

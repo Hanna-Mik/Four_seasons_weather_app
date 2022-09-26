@@ -32,6 +32,38 @@ footer {
   text-align: center;
   color: #fff;
 }
+.summer {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/120/original/summer.jpg?1663063490");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #464646;
+}
+.autumn {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/118/original/autumn.jpg?1663063469");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #464646;
+}
+.winter {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/262/original/aaron-burden-ejUU3U7Rlns-unsplash.jpg?1663255208");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #464646;
+}
+.spring {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/261/original/sergey-shmidt-koy6FlCCy5s-unsplash.jpg?1663255187");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #464646;
+}
 .weather-app {
   margin: 40px auto 200px;
   max-width: 800px;
