@@ -148,6 +148,19 @@ function handleSubmit(event) {
   event.preventDefault();
   search(document.querySelector("#search-form-input").value);
 }
+function searchForCurrentlocation(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
+  let units = "metric";
+  let apiKey = "738993d32099f81cb584e637be73ea30";
+  let apiUrl = `${apiEndPoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showWeatherInformation);
+}
+function getCurrentLocation(event) {
+  event.preventDefault;
+  navigator.geolocation.getCurrentPosition(searchForCurrentlocation);
+}
 
 function tryWinterImage() {
   document.body.style.backgroundImage =
@@ -176,7 +189,9 @@ function tryAutumnImage() {
 document
   .querySelector("#submit-button")
   .addEventListener("click", handleSubmit);
-
+document
+  .querySelector("#search-button")
+  .addEventListener("click", getCurrentLocation);
 document.querySelector("#winter").addEventListener("click", tryWinterImage);
 document.querySelector("#spring").addEventListener("click", trySpringImage);
 document.querySelector("#summer").addEventListener("click", trySummerImage);
