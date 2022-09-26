@@ -38,8 +38,35 @@ footer {
   padding: 30px;
   background: rgba(0, 0, 0, 0.3);
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
 }
+.fa-solid {
+  font-size: 36px;
+}
+#submit-button {
+  padding: 0px;
+  color: white;
+  opacity: 0.8;
+  background-color: transparent;
+  text-align: center;
+  border: none;
+  transition: all 150ms ease-out;
+}
+#submit-button:hover {
+  color: #0a58ca;
+  opacity: 0.8;
+}
+.fa-location-dot {
+  transition: all 150ms ease-out;
+  color: white;
+  opacity: 0.8;
+}
+.fa-location-dot:hover {
+  color: #0a58ca;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 #temperature {
   font-size: 48px;
 }
