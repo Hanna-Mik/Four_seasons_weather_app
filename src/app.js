@@ -68,7 +68,6 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt="cloud"
-          width="42px"
           class="weather-forecast-icon"
           />
           <div class="weather-forecast-temperatures">
