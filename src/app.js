@@ -133,8 +133,37 @@ function handleSubmit(event) {
   search(document.querySelector("#search-form-input").value);
 }
 
+function tryWinterImage() {
+  document.body.style.backgroundImage =
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/262/original/aaron-burden-ejUU3U7Rlns-unsplash.jpg?1663255208')";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundSize = "cover";
+}
+function trySpringImage() {
+  document.body.style.backgroundImage =
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/261/original/sergey-shmidt-koy6FlCCy5s-unsplash.jpg?1663255187')";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundSize = "cover";
+}
+function trySummerImage() {
+  document.body.style.backgroundImage =
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/120/original/summer.jpg?1663063490')";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundSize = "cover";
+}
+function tryAutumnImage() {
+  document.body.style.backgroundImage =
+    "url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/046/118/original/autumn.jpg?1663063469')";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundSize = "cover";
+}
 document
   .querySelector("#submit-button")
   .addEventListener("click", handleSubmit);
+
+document.querySelector("#winter").addEventListener("click", tryWinterImage);
+document.querySelector("#spring").addEventListener("click", trySpringImage);
+document.querySelector("#summer").addEventListener("click", trySummerImage);
+document.querySelector("#autumn").addEventListener("click", tryAutumnImage);
 
 search("Kyiv");
